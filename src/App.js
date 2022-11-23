@@ -1,41 +1,24 @@
-import './App.css';
-import api from './api'
-import { Component } from 'react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import './App.css';  
+import {BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import Home from './pages/Home';
 
-
-class App extends Component {
-
-  state = {
-    filmes: [],
-
-  }
-
-  async componentDidMount(){
-    const response = await api.get('')
-   // console.log(response.data)
-
-    this.setState({filmes: response.data})
-  }
-
-  render(){
-
-    const {filmes} = this.state
+function App() {
+ 
     return(
       <div>
-          <h1>Listar os filmes</h1>
-          {filmes.map(filme => (
-            <li key={filme.show.id}>
-              <h2>Título do filme: {filme.show.name}  </h2>
-              
-              <p>{filme.show.url}</p>
-            </li>
-          ))}
+            <BrowserRouter>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li> 
+        </ul>
+        <Routes>
+          <Route path='/' element={< Home />} /> 
+        </Routes>
+      </BrowserRouter>
       </div>
     )
-  }
-}
-
+  } 
  
 
 export default App;

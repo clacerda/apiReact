@@ -1,9 +1,10 @@
 import React from 'react'
+import HookApi from '../components/HookApi'
 
 const Home = () => {
   return (
     <div>
-        <h2>Pagina inicial:</h2>
+         <HookApi />
     </div>
   )
 }
