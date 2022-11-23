@@ -1,5 +1,6 @@
 import api from '../api'
 import { Component } from 'react';
+import HookApiCss from '../components/HookApi.module.css'
 
 class HookApi extends Component {
 
@@ -8,8 +9,7 @@ class HookApi extends Component {
     }
   
     async componentDidMount(){
-      const response = await api.get('')
-     // console.log(response.data)
+      const response = await api.get('') 
   
       this.setState({filmes: response.data})
     }
@@ -18,7 +18,7 @@ class HookApi extends Component {
   
       const {filmes} = this.state
       return(
-        <div>
+        <div className={HookApiCss.div_center}>
             <h1>Listar os filmes</h1>
             {filmes.map(filme => (
               <li key={filme.show.id}>
