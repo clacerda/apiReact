@@ -2,5 +2,29 @@
     display: block;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: center; 
+}
+
+.list { 
+    border-radius: 9px;
+    background-image: linear-gradient(to bottom right, red, yellow);
+    width: 500px;
+    /* height: 60px; */
+    margin-left: 36.5%;
+    /* Remover dots do LI */
+    list-style-type: none; 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.title { 
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    background-image: linear-gradient(to bottom right,  yellow, red);
+} 
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
